@@ -1,0 +1,549 @@
+<html>
+<head>
+<title>TestNG:  Sample Test Case for Package</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Sample Test Case for Package</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/7/2</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Jun 12 20:58:02 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (91 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testng.training.AssertionExample.testTwo()'><b>testTwo</b><br>Test class: com.testng.training.AssertionExample</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [404]
+	at com.testng.training.AssertionExample.testTwo(AssertionExample.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace918312414", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace918312414'><pre>java.lang.AssertionError: expected [200] but found [404]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1240)
+	at org.testng.Assert.assertEquals(Assert.java:1274)
+	at com.testng.training.AssertionExample.testTwo(AssertionExample.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.AssertionExample@a4102b8</td></tr>
+<tr>
+<td title='com.testng.training.SoftAssertionExample.testCasetwo()'><b>testCasetwo</b><br>Test class: com.testng.training.SoftAssertionExample</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Second soft assert failed expected [true] but found [false]
+	at com.testng.training.SoftAssertionExample.testCasetwo(SoftAssertionExample.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1239759990", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1239759990'><pre>java.lang.AssertionError: The following asserts failed:
+	Second soft assert failed expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.testng.training.SoftAssertionExample.testCasetwo(SoftAssertionExample.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.SoftAssertionExample@4f638935</td></tr>
+<tr>
+<td title='com.testng.training.TestParameters.testCaseTwo()'><b>testCaseTwo</b><br>Test class: com.testng.training.TestParameters</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;userName&apos; is required by @Test on method testCaseTwo but has not been marked @Optional or defined
+in C:\Users\91777\eclipse-workspace\MyTestNGProject\testng.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace348984985", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace348984985'><pre>org.testng.TestNGException: 
+Parameter &apos;userName&apos; is required by @Test on method testCaseTwo but has not been marked @Optional or defined
+in C:\Users\91777\eclipse-workspace\MyTestNGProject\testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:888)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:917)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.TestParameters@6e75aa0d</td></tr>
+<tr>
+<td title='com.testng.training.TestParameters.testCaseOne()'><b>testCaseOne</b><br>Test class: com.testng.training.TestParameters</td>
+<td><div><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by @Test on method testCaseOne but has not been marked @Optional or defined
+in C:\Users\91777\eclipse-workspace\MyTestNGProject\testng.xml
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1984975621", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1984975621'><pre>org.testng.TestNGException: 
+Parameter &apos;browser&apos; is required by @Test on method testCaseOne but has not been marked @Optional or defined
+in C:\Users\91777\eclipse-workspace\MyTestNGProject\testng.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:267)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:888)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:917)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.TestParameters@6e75aa0d</td></tr>
+<tr>
+<td title='com.testng.training.AssertionExample.testFour()'><b>testFour</b><br>Test class: com.testng.training.AssertionExample</td>
+<td><div><pre>java.lang.AssertionError: Making Test Failure expected [true] but found [false]
+	at com.testng.training.AssertionExample.testFour(AssertionExample.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace982757413", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace982757413'><pre>java.lang.AssertionError: Making Test Failure expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at com.testng.training.AssertionExample.testFour(AssertionExample.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.AssertionExample@a4102b8</td></tr>
+<tr>
+<td title='com.testng.training.MultiTestDependency.process()'><b>process</b><br>Test class: com.testng.training.MultiTestDependency</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.testng.training.MultiTestDependency.process(MultiTestDependency.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace150268540", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace150268540'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.testng.training.MultiTestDependency.process(MultiTestDependency.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.MultiTestDependency@7a52f2a2</td></tr>
+<tr>
+<td title='com.testng.training.SoftAssertionExample.testCaseOne()'><b>testCaseOne</b><br>Test class: com.testng.training.SoftAssertionExample</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Second hard assert failed expected [true] but found [false]
+	at com.testng.training.SoftAssertionExample.testCaseOne(SoftAssertionExample.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1961945640", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1961945640'><pre>java.lang.AssertionError: The following asserts failed:
+	Second hard assert failed expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.testng.training.SoftAssertionExample.testCaseOne(SoftAssertionExample.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.SoftAssertionExample@4f638935</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testng.training.AssertionExample.testOne()'><b>testOne</b><br>Test class: com.testng.training.AssertionExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.AssertionExample@a4102b8</td></tr>
+<tr>
+<td title='com.testng.training.SampleTestOne.sampleTestOneMethodTwo()'><b>sampleTestOneMethodTwo</b><br>Test class: com.testng.training.SampleTestOne</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.SampleTestOne@79ca92b9</td></tr>
+<tr>
+<td title='com.testng.training.PriorityExample.testTwo()'><b>testTwo</b><br>Test class: com.testng.training.PriorityExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.PriorityExample@78047b92</td></tr>
+<tr>
+<td title='com.testng.training.SkippingExample.testOne()'><b>testOne</b><br>Test class: com.testng.training.SkippingExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.SkippingExample@1460a8c0</td></tr>
+<tr>
+<td title='com.testng.training.SoftAssertionExample.testCaseThree()'><b>testCaseThree</b><br>Test class: com.testng.training.SoftAssertionExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.SoftAssertionExample@4f638935</td></tr>
+<tr>
+<td title='com.testng.training.SkippingExample.testFour()'><b>testFour</b><br>Test class: com.testng.training.SkippingExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.SkippingExample@1460a8c0</td></tr>
+<tr>
+<td title='com.testng.training.PriorityExample.testOne()'><b>testOne</b><br>Test class: com.testng.training.PriorityExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.PriorityExample@78047b92</td></tr>
+<tr>
+<td title='com.testng.training.TestCaseGrouping.testCaseTwo()'><b>testCaseTwo</b><br>Test class: com.testng.training.TestCaseGrouping</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.TestCaseGrouping@4387b79e</td></tr>
+<tr>
+<td title='com.testng.training.MultiTestDependency.start()'><b>start</b><br>Test class: com.testng.training.MultiTestDependency</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.MultiTestDependency@7a52f2a2</td></tr>
+<tr>
+<td title='com.testng.training.PriorityExample.testFour()'><b>testFour</b><br>Test class: com.testng.training.PriorityExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.PriorityExample@78047b92</td></tr>
+<tr>
+<td title='com.testng.training.SampleTestOne.sampleTestOneMethodOne()'><b>sampleTestOneMethodOne</b><br>Test class: com.testng.training.SampleTestOne</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.SampleTestOne@79ca92b9</td></tr>
+<tr>
+<td title='com.testng.training.MultiTestDependency.init()'><b>init</b><br>Test class: com.testng.training.MultiTestDependency</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.MultiTestDependency@7a52f2a2</td></tr>
+<tr>
+<td title='com.testng.training.SamplClassTwo.sampleTestTwoMethodOne()'><b>sampleTestTwoMethodOne</b><br>Test class: com.testng.training.SamplClassTwo</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.SamplClassTwo@8909f18</td></tr>
+<tr>
+<td title='com.testng.training.AssertionExample.testSix()'><b>testSix</b><br>Test class: com.testng.training.AssertionExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.AssertionExample@a4102b8</td></tr>
+<tr>
+<td title='com.testng.training.SamplClassTwo.sampleTestTwoMethodTwo()'><b>sampleTestTwoMethodTwo</b><br>Test class: com.testng.training.SamplClassTwo</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.SamplClassTwo@8909f18</td></tr>
+<tr>
+<td title='com.testng.training.TestCaseGrouping.testCaseOne()'><b>testCaseOne</b><br>Test class: com.testng.training.TestCaseGrouping</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.TestCaseGrouping@4387b79e</td></tr>
+<tr>
+<td title='com.testng.training.AssertionExample.testThree()'><b>testThree</b><br>Test class: com.testng.training.AssertionExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.AssertionExample@a4102b8</td></tr>
+<tr>
+<td title='com.testng.training.TestCaseGrouping.testCaseThree()'><b>testCaseThree</b><br>Test class: com.testng.training.TestCaseGrouping</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.TestCaseGrouping@4387b79e</td></tr>
+<tr>
+<td title='com.testng.training.PriorityExample.testThree()'><b>testThree</b><br>Test class: com.testng.training.PriorityExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.PriorityExample@78047b92</td></tr>
+<tr>
+<td title='com.testng.training.AssertionExample.testFive()'><b>testFive</b><br>Test class: com.testng.training.AssertionExample</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.AssertionExample@a4102b8</td></tr>
+<tr>
+<td title='com.testng.training.TestCaseGrouping.testCaseFour()'><b>testCaseFour</b><br>Test class: com.testng.training.TestCaseGrouping</td>
+<td></td>
+<td>0</td>
+<td>com.testng.training.TestCaseGrouping@4387b79e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testng.training.MultiTestDependency.stop()'><b>stop</b><br>Test class: com.testng.training.MultiTestDependency</td>
+<td><div><pre>java.lang.Throwable: Method com.testng.training.MultiTestDependency.stop() on instance com.testng.training.MultiTestDependency@7a52f2a2 depends on not successfully finished methods 
+[com.testng.training.MultiTestDependency.init() on instance com.testng.training.MultiTestDependency@7a52f2a2
+com.testng.training.MultiTestDependency.process() on instance com.testng.training.MultiTestDependency@7a52f2a2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1072410641", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1072410641'><pre>java.lang.Throwable: Method com.testng.training.MultiTestDependency.stop() on instance com.testng.training.MultiTestDependency@7a52f2a2 depends on not successfully finished methods 
+[com.testng.training.MultiTestDependency.init() on instance com.testng.training.MultiTestDependency@7a52f2a2
+com.testng.training.MultiTestDependency.process() on instance com.testng.training.MultiTestDependency@7a52f2a2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.MultiTestDependency@7a52f2a2</td></tr>
+<tr>
+<td title='com.testng.training.SkippingExample.testThree()'><b>testThree</b><br>Test class: com.testng.training.SkippingExample</td>
+<td><div><pre>org.testng.SkipException: Skipping Delibretly, As this test is incomplete
+	at com.testng.training.SkippingExample.testThree(SkippingExample.java:22)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1226020905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1226020905'><pre>org.testng.SkipException: Skipping Delibretly, As this test is incomplete
+	at com.testng.training.SkippingExample.testThree(SkippingExample.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.TestNG.privateMain(TestNG.java:1414)
+	at org.testng.TestNG.main(TestNG.java:1378)
+</pre></div></td>
+<td>0</td>
+<td>com.testng.training.SkippingExample@1460a8c0</td></tr>
+</table><p>
+</body>
+</html>
